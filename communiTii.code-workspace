@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "apps/api"
+		},
+		{
+			"path": "packages/universal-components"
 		}
 	],
   "settings": {

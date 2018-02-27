@@ -1,0 +1,26 @@
+{
+  "main": "storybook-mobile/index.js",
+  "name": "@communitii/universal-components",
+  "private": false,
+  "version": "0.0.0",
+  "dependencies": {
+    "expo": "^25.0.0",
+    "react": "16.2.0",
+    "react-native":
+      "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.14",
+    "@storybook/addon-links": "^3.3.14",
+    "@storybook/addons": "^3.3.14",
+    "@storybook/react": "^3.3.14",
+    "@storybook/react-native": "^3.3.14",
+    "babel-core": "^6.26.0",
+    "prop-types": "^15.6.1",
+    "react-dom": "16.2.0"
+  },
+  "scripts": {
+    "storybook": "storybook start -p 7007 -c storybook-mobile",
+    "add:lerna": "lerna add --scope=@communitii/universal-components"
+  }
+}
