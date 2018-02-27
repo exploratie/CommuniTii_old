@@ -1,0 +1,16 @@
+{
+  "name": "@communitii/api",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "add:lerna": "lerna add --scope=@communitii/api",
+    "start": "backpack dev"
+  },
+  "devDependencies": {
+    "backpack-core": "^0.5.0"
+  },
+  "dependencies": {
+    "graphql-yoga": "^1.4.3"
+  }
+}

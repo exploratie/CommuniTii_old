@@ -5,6 +5,12 @@
 		},
 		{
 			"path": "apps/web"
+		},
+		{
+			"path": "apps/mobile"
+		},
+		{
+			"path": "apps/api"
 		}
 	],
   "settings": {

@@ -4,20 +4,21 @@
   "license": "MIT",
   "scripts": {
     "add:lerna": "lerna add --scope=@communitii/web",
-    "start": "razzle start",
-    "build": "razzle build",
-    "test": "razzle test --env=jsdom",
-    "start:prod": "NODE_ENV=production node build/server.js"
+    "start": "next"
   },
   "dependencies": {
-    "@jaredpalmer/after": "^1.1.0",
-    "express": "^4.16.2",
+    "apollo-boost": "^0.1.1",
+    "next": "5.0.1-canary.9",
+    "next-with-apollo": "^1.0.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-native-web": "^0.5.1"
   },
   "devDependencies": {
+    "babel-plugin-module-resolver": "^3.1.0",
     "babel-plugin-react-native-web": "^0.5.1",
-    "razzle": "^0.8.12"
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react-native": "^4.0.0",
+    "babel-preset-stage-0": "^6.24.1"
   }
 }
