@@ -1,26 +1,26 @@
 {
-  "main": "storybook-mobile/index.js",
   "name": "@communitii/universal-components",
-  "private": false,
   "version": "0.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "add:lerna": "lerna add --scope=@communitii/universal-components",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build": "build-storybook"
+  },
   "dependencies": {
-    "expo": "^25.0.0",
-    "react": "16.2.0",
-    "react-native":
-      "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz"
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-native-web": "^0.5.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.3.14",
-    "@storybook/addon-links": "^3.3.14",
-    "@storybook/addons": "^3.3.14",
     "@storybook/react": "^3.3.14",
-    "@storybook/react-native": "^3.3.14",
-    "babel-core": "^6.26.0",
-    "prop-types": "^15.6.1",
-    "react-dom": "16.2.0"
-  },
-  "scripts": {
-    "storybook": "storybook start -p 7007 -c storybook-mobile",
-    "add:lerna": "lerna add --scope=@communitii/universal-components"
+    "babel-minify-webpack-plugin": "^0.3.0",
+    "babel-plugin-module-resolver": "^3.1.0",
+    "babel-plugin-react-native-web": "^0.5.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react-native": "^4.0.0",
+    "babel-preset-stage-0": "^6.24.1"
   }
 }

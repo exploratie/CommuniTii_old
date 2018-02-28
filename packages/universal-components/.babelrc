@@ -1,8 +1,12 @@
 {
-  "presets": ["babel-preset-expo"],
-  "env": {
-    "development": {
-      "plugins": ["transform-react-jsx-source"]
-    }
-  }
+  "presets": ["es2017", "stage-0", "react-native"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "extensions": ["web.js", ".js"]
+      }
+    ],
+    "react-native-web"
+  ]
 }

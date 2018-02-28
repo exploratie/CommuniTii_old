@@ -1,9 +1,0 @@
-.expo
-assets
-node_modules
-storybook-mobile
-storybook-web
-.babelrc
-.watchmanconfig
-app.json
-.gitignore
