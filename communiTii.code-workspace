@@ -18,6 +18,10 @@
 	],
   "settings": {
 		"editor.formatOnSave": true,
-    	"prettier.eslintIntegration": true
+    "prettier.eslintIntegration": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    }
 	}
 }
