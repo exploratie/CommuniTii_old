@@ -1,6 +1,29 @@
 import React from "react"
-import { View, Text } from "react-native"
+import { StackNavigator } from "react-navigation"
 import { Ionicons } from "@expo/vector-icons"
+
+import LovedLogView from "./LovedLog"
+
+const QuestLogNavigation = StackNavigator(
+  {
+    QuestLog: {
+      screen: LovedLogView
+    }
+  },
+  {
+    navigationOptions: {
+      headerTitle: "Quest Log",
+      headerStyle: {
+        backgroundColor: "#2196F3"
+      },
+      headerTitleStyle: {
+        color: "#fff",
+        fontSize: 26,
+        fontWeight: "bold"
+      }
+    }
+  }
+)
 
 class QuestLogScreen extends React.Component {
   static navigationOptions = {
@@ -14,11 +37,7 @@ class QuestLogScreen extends React.Component {
   }
 
   render() {
-    return (
-      <View>
-        <Text>This is the Quest Log Screen</Text>
-      </View>
-    )
+    return <QuestLogNavigation />
   }
 }
 
