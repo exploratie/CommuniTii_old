@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "production": "communitii-dev",
+    "staging": "communitii-dev",
+    "development": "communitii-dev"
+  }
+}
