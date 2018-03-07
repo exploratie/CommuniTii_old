@@ -1,18 +1,23 @@
 {
-  "name": "@communitii/web-ssr",
+  "name": "@communitii/web",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
   "scripts": {
-    "install": "yarn build-all",
-    "next": "yarn build-firebase && cd \"src/client\" && yarn && yarn dev",
-    "preserve": "yarn build-all",
+    "preserve": "yarn build:next",
     "serve": "firebase serve",
-    "predeploy": "yarn build-all",
+    "predeploy": "yarn build:next",
     "deploy": "firebase deploy",
-    "build-all": "yarn build-next && yarn build-firebase",
-    "build-next": "cd \"src/client\" && yarn && yarn build",
-    "build-firebase": "cd \"src/functions\" && yarn"
+    "dev": "next",
+    "build:next": "next build"
+  },
+  "dependencies": {
+    "firebase-admin": "^5.9.1",
+    "firebase-functions": "^0.8.1",
+    "material-ui": "^1.0.0-beta.36",
+    "next": "^5.0.1-canary.11",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "firebase-tools": "^3.17.4"
