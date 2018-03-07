@@ -8,8 +8,8 @@
     "serve": "firebase serve",
     "predeploy": "yarn build:next",
     "deploy": "firebase deploy",
-    "dev": "next",
-    "build:next": "next build"
+    "dev": "next client/",
+    "build:next": "next build client/"
   },
   "dependencies": {
     "firebase-admin": "^5.9.1",

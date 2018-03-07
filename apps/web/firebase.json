@@ -14,7 +14,10 @@
       "pages",
       "static",
       "components",
-      "next.config.js"
+      "reducers",
+      "epics",
+      "next.config.js",
+      "client/"
     ]
   },
   "functions": {
