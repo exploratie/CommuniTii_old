@@ -6,6 +6,15 @@
         "source": "**/**",
         "function": "next"
       }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "pages",
+      "static",
+      "components",
+      "next.config.js"
     ]
   },
   "functions": {
