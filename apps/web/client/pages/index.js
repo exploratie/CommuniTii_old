@@ -1,9 +1,14 @@
 import React from "react"
+import Typography from "material-ui/Typography"
+
+import withRoot from "../lib/withRoot"
 
 const IndexPage = () => (
   <div>
-    <h1>Hello</h1>
+    <Typography variant="display1" gutterBottom>
+      Welcome to your CommuniTii
+    </Typography>
   </div>
 )
 
-export default IndexPage
+export default withRoot(IndexPage)

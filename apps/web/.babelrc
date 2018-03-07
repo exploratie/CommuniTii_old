@@ -1,0 +1,20 @@
+{
+  "presets": ["next/babel", "stage-0", "es2017"],
+  "env": {
+    "development": {
+      "plugins": ["inline-dotenv"]
+    },
+    "production": {
+      "plugins": [
+        [
+          "module-resolver",
+          {
+            "alias": {}
+          }
+        ],
+        "transform-inline-environment-variables",
+        "babel-plugin-transform-decorators-legacy"
+      ]
+    }
+  }
+}

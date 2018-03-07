@@ -7,18 +7,7 @@
         "function": "next"
       }
     ],
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      "pages",
-      "static",
-      "components",
-      "reducers",
-      "epics",
-      "next.config.js",
-      "client/"
-    ]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "client/"]
   },
   "functions": {
     "source": "."
