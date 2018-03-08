@@ -6,8 +6,10 @@
     "@expo/vector-icons": "^6.3.1",
     "apollo-boost": "^0.1.1",
     "expo": "^25.0.0",
+    "firebase": "^4.10.1",
     "graphql": "^0.13.1",
     "graphql-tag": "^2.8.0",
+    "native-base": "^2.3.9",
     "prop-types": "^15.6.1",
     "react": "16.2.0",
     "react-apollo": "^2.0.4",
@@ -15,6 +17,7 @@
     "react-native-radio-buttons": "^1.0.0",
     "react-navigation": "^1.3.0",
     "react-redux": "^5.0.7",
+    "react-redux-firebase": "^2.0.4",
     "redux": "^3.7.2",
     "redux-observable": "^0.18.0"
   },
@@ -24,6 +27,7 @@
     "@storybook/addons": "^3.3.14",
     "@storybook/react-native": "^3.3.14",
     "babel-core": "^6.26.0",
+    "exp": "^49.2.2",
     "react-dom": "16.2.0",
     "react-native-storybook-loader": "^1.7.0"
   },
@@ -38,6 +42,7 @@
   "scripts": {
     "storybook": "storybook start -p 7007",
     "prestorybook": "rnstl",
-    "add:lerna": "lerna add --scope=@communitii/mobile"
+    "add:l": "lerna add --scope=@communitii/mobile",
+    "start": "exp start"
   }
 }
