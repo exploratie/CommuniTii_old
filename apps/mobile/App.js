@@ -1,16 +1,25 @@
 import React from "react"
 import Expo from "expo"
+import { Provider } from "react-redux"
 
-import Screens from "./screens"
+import initStore from "./lib/initStore"
+import AppNavigator from "./containers/AppNavigator"
 
-export default class App extends React.Component {
+const store = initStore()
+
+export default class App extends React.PureComponent {
   async componentWillMount() {
     await Expo.Font.loadAsync({
       Roboto: require("native-base/Fonts/Roboto.ttf"),
       Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
     })
   }
+
   render() {
-    return <Screens />
+    return (
+      <Provider store={store}>
+        <AppNavigator />
+      </Provider>
+    )
   }
 }
