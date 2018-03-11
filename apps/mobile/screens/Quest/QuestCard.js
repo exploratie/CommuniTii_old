@@ -2,15 +2,15 @@ import React, { PureComponent } from "react"
 import {
   Container,
   Body,
-  Content,
   Header,
   Left,
   Right,
   Title,
-  Text,
   Button,
   Icon
 } from "native-base"
+
+import QuestCardDeck from "../../containers/QuestCardDeck"
 
 class QuestCard extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
@@ -36,9 +36,7 @@ class QuestCard extends PureComponent {
   render() {
     return (
       <Container>
-        <Content>
-          <Text>This is the Quest Page</Text>
-        </Content>
+        <QuestCardDeck />
       </Container>
     )
   }
