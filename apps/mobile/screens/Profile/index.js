@@ -1,25 +1,8 @@
-import React from "react"
-import { View, Text } from "react-native"
-import { Ionicons } from "@expo/vector-icons"
+import { StackNavigator } from "react-navigation"
+import ProfileScreen from "./ProfileScreen"
 
-class QuestScreen extends React.Component {
-  static navigationOptions = {
-    tabBarIcon: ({ focused, tintColor }) => (
-      <Ionicons
-        name={focused ? "ios-person" : "ios-person-outline"}
-        size={26}
-        style={{ color: "#fff" }}
-      />
-    )
+export default StackNavigator({
+  Profile: {
+    screen: ProfileScreen
   }
-
-  render() {
-    return (
-      <View>
-        <Text>This is the Profile Screen</Text>
-      </View>
-    )
-  }
-}
-
-export default QuestScreen
+})

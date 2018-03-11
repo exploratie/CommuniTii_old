@@ -1,25 +1,7 @@
-import React, { PureComponent } from "react"
-import { View, Text } from "react-native"
-import { Ionicons } from "@expo/vector-icons"
+import { StackNavigator } from "react-navigation"
 
-class QuestScreen extends PureComponent {
-  static navigationOptions = {
-    tabBarIcon: ({ focused, tintColor }) => (
-      <Ionicons
-        name={focused ? "ios-search" : "ios-search-outline"}
-        size={26}
-        style={{ color: "#fff" }}
-      />
-    )
-  }
+import QuestCardScreen from "./QuestCard"
 
-  render() {
-    return (
-      <View>
-        <Text>This is the Quest Screen</Text>
-      </View>
-    )
-  }
-}
-
-export default QuestScreen
+export default StackNavigator({
+  QuestCard: { screen: QuestCardScreen }
+})

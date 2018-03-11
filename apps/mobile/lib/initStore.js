@@ -1,5 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from "redux"
-import { composeWithDevTools } from "remote-redux-devtools"
+import { composeWithDevTools } from "redux-devtools-extension"
 
 import reducers from "../reducers"
 import { middleware as navMiddleware } from "../lib/navHelpers"

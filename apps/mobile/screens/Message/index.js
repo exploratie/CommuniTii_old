@@ -1,14 +1,9 @@
-import React from "react"
-import { View, Text } from "react-native"
+import { StackNavigator } from "react-navigation"
 
-class MessageScreen extends React.Component {
-  render() {
-    return (
-      <View>
-        <Text>This is the Message Screen</Text>
-      </View>
-    )
+import MessageList from "./MessageList"
+
+export default StackNavigator({
+  MesasgeList: {
+    screen: MessageList
   }
-}
-
-export default MessageScreen
+})

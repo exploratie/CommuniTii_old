@@ -31,7 +31,7 @@ const BottomNav = ({ navItems, navigationState, navigation }) => (
           onPress={() => navigation.navigate(navItem.screenName)}
         >
           <Icon android={navItem.mdIcon} ios={navItem.iosIcon} />
-          <Text>{navItem.screenName}</Text>
+          {/* <Text>{navItem.screenName}</Text> */}
         </Button>
       ))}
     </FooterTab>
