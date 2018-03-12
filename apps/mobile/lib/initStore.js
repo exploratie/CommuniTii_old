@@ -30,8 +30,7 @@ const firebaseConfig = {
 
 // react redux firebase config
 const rrfConfig = {
-  userProfile: "users",
-  useFirestoreForProfile: true
+  userProfile: "users"
 }
 
 // initialize firebase & firestore instance

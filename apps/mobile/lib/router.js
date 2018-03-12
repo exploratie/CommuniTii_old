@@ -3,6 +3,8 @@ import { TabNavigator, StackNavigator } from "react-navigation"
 import ProfileScreen from "../screens/Profile/ProfileScreen"
 import QuestCardScreen from "../screens/Quest/QuestCard"
 import MessageListScreen from "../screens/Message/MessageList"
+import SignInScreen from "../screens/Auth/SignIn"
+import SignUpScreen from "../screens/Auth/SignUp"
 
 import BottomNav from "../components/BottomNav"
 
@@ -32,9 +34,18 @@ const QuestNav = StackNavigator(
   }
 )
 
-// TODO: Fix statusbar height issue in android
+export const SignedOutNav = StackNavigator(
+  {
+    SignIn: { screen: SignInScreen },
+    SignUp: { screen: SignUpScreen }
+  },
+  {
+    initialRouteName: "SignIn"
+  }
+)
 
-export default TabNavigator(
+// TODO: Fix statusbar height issue in android
+export const SignedInNav = TabNavigator(
   {
     Quest: { screen: QuestNav },
     Message: { screen: MessageNav },
@@ -42,7 +53,6 @@ export default TabNavigator(
   },
   {
     tabBarComponent: BottomNav,
-    initialRouteName: "Quest",
     animationEnabled: true,
     swipeEnabled: false,
     tabBarPosition: "bottom"

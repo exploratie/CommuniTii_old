@@ -53,6 +53,10 @@ const styles = StyleSheet.create({
   }
 })
 
+// TODO: Break out the card Component from DeckSwiper into a seerate file
+// TODO: Clean up empty card setup
+// TODO: Use flex box for creating layout so works with variety of screen sizes
+
 export default class QuestCardDeck extends Component {
   render() {
     return (

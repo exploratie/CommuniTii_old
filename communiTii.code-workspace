@@ -22,6 +22,7 @@
     "emmet.triggerExpansionOnTab": true,
     "emmet.includeLanguages": {
       "javascript": "javascriptreact"
-    }
+    },
+    "todo-tree.flat": true
   }
 }

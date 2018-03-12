@@ -23,3 +23,7 @@ export default class App extends React.PureComponent {
     )
   }
 }
+
+// Features
+// ==========
+// TODO: Add authentication

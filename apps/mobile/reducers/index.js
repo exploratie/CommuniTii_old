@@ -4,6 +4,6 @@ import { firestoreReducer } from "redux-firestore"
 
 export default {
   nav,
-  firebaseReducer,
-  firestoreReducer
+  firebase: firebaseReducer,
+  firestore: firestoreReducer
 }
