@@ -1,13 +1,10 @@
 import React, { PureComponent } from "react"
 import { connect } from "react-redux"
 import { addNavigationHelpers, NavigationActions } from "react-navigation"
-import { func, object, bool } from "prop-types"
+import { func, object } from "prop-types"
 import { BackHandler } from "react-native"
 
-import {
-  SignedInNav as SignedInRouter,
-  SignedOutNav as SignedOutRouter
-} from "../lib/router"
+import { RootNav as RootRouter } from "../lib/router"
 import { addListener } from "../lib/navHelpers"
 
 @connect(({ nav, firebase }) => ({ nav, auth: firebase.auth }))
@@ -36,8 +33,8 @@ class AppNavigator extends PureComponent {
   }
 
   render() {
-    return this.props.auth.isEmpty ? (
-      <SignedOutRouter
+    return !this.props.auth.isEmpty ? (
+      <RootRouter
         navigation={addNavigationHelpers({
           dispatch: this.props.dispatch,
           state: this.props.nav.signedOut,
@@ -45,7 +42,7 @@ class AppNavigator extends PureComponent {
         })}
       />
     ) : (
-      <SignedInRouter
+      <RootRouter
         navigation={addNavigationHelpers({
           dispatch: this.props.dispatch,
           state: this.props.nav.signedIn,

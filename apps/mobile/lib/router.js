@@ -34,16 +34,6 @@ const QuestNav = StackNavigator(
   }
 )
 
-export const SignedOutNav = StackNavigator(
-  {
-    SignIn: { screen: SignInScreen },
-    SignUp: { screen: SignUpScreen }
-  },
-  {
-    initialRouteName: "SignIn"
-  }
-)
-
 // TODO: Fix statusbar height issue in android
 export const SignedInNav = TabNavigator(
   {
@@ -56,5 +46,18 @@ export const SignedInNav = TabNavigator(
     animationEnabled: true,
     swipeEnabled: false,
     tabBarPosition: "bottom"
+  }
+)
+
+export const RootNav = StackNavigator(
+  {
+    SignIn: { screen: SignInScreen },
+    SignUp: { screen: SignUpScreen },
+    SignedInNav
+  },
+  {
+    navigationOptions: {
+      header: null
+    }
   }
 )

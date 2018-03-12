@@ -1,25 +1,16 @@
-import {
-  SignedInNav as SignedInRouter,
-  SignedOutNav as SignedOutRouter
-} from "../lib/router"
+import { RootNav } from "../lib/router"
 
-const ActionForSignIn = SignedInRouter.router.getActionForPathAndParams("Quest")
-const ActionForSignOut = SignedOutRouter.router.getActionForPathAndParams(
-  "SignIn"
-)
+const ActionForSignIn = RootNav.router.getActionForPathAndParams("SignedInNav")
+const ActionForSignOut = RootNav.router.getActionForPathAndParams("SignIn")
 
-const stateForSignIn = SignedInRouter.router.getStateForAction(ActionForSignIn)
-const stateForSignOut = SignedOutRouter.router.getStateForAction(
-  ActionForSignOut
-)
+const stateForSignIn = RootNav.router.getStateForAction(ActionForSignIn)
+const stateForSignOut = RootNav.router.getStateForAction(ActionForSignOut)
 
 const INITIAL_STATE = {
   signedOut: stateForSignOut,
   signedIn: stateForSignIn
 }
 
-// // TODO: Figure out redux architecture how to pass firebase auth state to nav reducer
-// TODO: Debug error in nested root handling
 // TODO: Setup login and log out procedures
 export default (state = INITIAL_STATE, action) => {
   // const nextState = SignedOutRouter.router.getStateForAction(action, state)
@@ -29,26 +20,15 @@ export default (state = INITIAL_STATE, action) => {
     case "@@redux/INIT":
       return {
         ...state,
-        signOut: SignedOutRouter.router.getStateForAction(
-          ActionForSignOut,
-          stateForSignOut
-        ),
-        signIn: SignedInRouter.router.getStateForAction(
+        signedIn: RootNav.router.getStateForAction(
           ActionForSignIn,
-          stateForSignIn
+          stateForSignOut
         )
       }
     default:
       return {
         ...state,
-        signedIn: SignedInRouter.router.getStateForAction(
-          action,
-          state.signedIn
-        ),
-        signedOut: SignedOutRouter.router.getStateForAction(
-          action,
-          state.signedOut
-        )
+        signedIn: RootNav.router.getStateForAction(action, state.signedIn)
       }
   }
 }
