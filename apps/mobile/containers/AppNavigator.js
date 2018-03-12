@@ -4,7 +4,7 @@ import { addNavigationHelpers, NavigationActions } from "react-navigation"
 import { func, object } from "prop-types"
 import { BackHandler } from "react-native"
 
-import Screens from "../screens"
+import Router from "../lib/router"
 import { addListener } from "../lib/navHelpers"
 
 @connect(({ nav }) => ({ nav }))
@@ -33,7 +33,7 @@ class AppNavigator extends PureComponent {
 
   render() {
     return (
-      <Screens
+      <Router
         navigation={addNavigationHelpers({
           dispatch: this.props.dispatch,
           state: this.props.nav,

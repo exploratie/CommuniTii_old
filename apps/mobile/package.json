@@ -15,6 +15,7 @@
     "react-redux": "^5.0.7",
     "react-redux-firebase": "^2.0.4",
     "redux": "^3.7.2",
+    "redux-auth-wrapper": "^2.0.2",
     "redux-devtools-extension": "^2.13.2",
     "redux-firestore": "^0.3.2",
     "redux-form": "^7.3.0",
@@ -29,6 +30,7 @@
     "@storybook/react-native": "^3.3.14",
     "babel-core": "^6.26.0",
     "babel-plugin-module-resolver": "^3.1.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "exp": "^49.2.2",
@@ -51,6 +53,7 @@
     "add:l": "lerna add --scope=@communitii/mobile",
     "start": "exp start",
     "start:ios": "exp ios",
-    "start:debug": "open \"rndebugger://set-debugger-loc?host=localhost&port=19001\""
+    "start:debug": "open \"rndebugger://set-debugger-loc?host=localhost&port=19001\"",
+    "dev": "yarn start:debug && yarn start:ios"
   }
 }
