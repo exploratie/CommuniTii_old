@@ -8,11 +8,17 @@ import SignUpScreen from "../screens/Auth/SignUp"
 
 import BottomNav from "../components/BottomNav"
 
-const MessageNav = StackNavigator({
-  MesasgeList: {
-    screen: MessageListScreen
+const MessageNav = StackNavigator(
+  {
+    MessageList: {
+      screen: MessageListScreen
+    }
+  },
+  {
+    headerMode: "none",
+    initialRouteName: "MessageList"
   }
-})
+)
 
 const ProfileNav = StackNavigator(
   {
@@ -21,7 +27,8 @@ const ProfileNav = StackNavigator(
     }
   },
   {
-    initialRouteName: "Profile"
+    initialRouteName: "Profile",
+    headerMode: "none"
   }
 )
 
@@ -30,7 +37,8 @@ const QuestNav = StackNavigator(
     QuestCard: { screen: QuestCardScreen }
   },
   {
-    initialRouteName: "QuestCard"
+    initialRouteName: "QuestCard",
+    headerMode: "none"
   }
 )
 
@@ -49,9 +57,11 @@ export const SignedInNav = TabNavigator(
   }
 )
 
-// TODO: Fix double header issue
-export const RootNav = StackNavigator({
-  SignIn: { screen: SignInScreen },
-  SignUp: { screen: SignUpScreen },
-  SignedIn: { screen: SignedInNav }
-})
+export const RootNav = StackNavigator(
+  {
+    SignIn: { screen: SignInScreen },
+    SignUp: { screen: SignUpScreen },
+    SignedIn: { screen: SignedInNav }
+  },
+  { headerMode: "screen" }
+)
