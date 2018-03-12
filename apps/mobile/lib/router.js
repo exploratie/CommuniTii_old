@@ -32,6 +32,8 @@ const QuestNav = StackNavigator(
   }
 )
 
+// TODO: Fix statusbar height issue in android
+
 export default TabNavigator(
   {
     Quest: { screen: QuestNav },
