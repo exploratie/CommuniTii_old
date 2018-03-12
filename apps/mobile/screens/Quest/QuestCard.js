@@ -28,7 +28,11 @@ class QuestCard extends PureComponent {
         <Body>
           <Title>Quest</Title>
         </Body>
-        <Right />
+        <Right>
+          <Button transparent>
+            <Icon android="md-book" ios="ios-book" />
+          </Button>
+        </Right>
       </Header>
     )
   })

@@ -49,15 +49,9 @@ export const SignedInNav = TabNavigator(
   }
 )
 
-export const RootNav = StackNavigator(
-  {
-    SignIn: { screen: SignInScreen },
-    SignUp: { screen: SignUpScreen },
-    SignedInNav
-  },
-  {
-    navigationOptions: {
-      header: null
-    }
-  }
-)
+// TODO: Fix double header issue
+export const RootNav = StackNavigator({
+  SignIn: { screen: SignInScreen },
+  SignUp: { screen: SignUpScreen },
+  SignedIn: { screen: SignedInNav }
+})

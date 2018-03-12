@@ -1,6 +1,6 @@
 import { RootNav } from "../lib/router"
 
-const ActionForSignIn = RootNav.router.getActionForPathAndParams("SignedInNav")
+const ActionForSignIn = RootNav.router.getActionForPathAndParams("SignedIn")
 const ActionForSignOut = RootNav.router.getActionForPathAndParams("SignIn")
 
 const stateForSignIn = RootNav.router.getStateForAction(ActionForSignIn)
