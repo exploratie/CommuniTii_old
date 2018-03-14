@@ -7,30 +7,31 @@ import {
   Right,
   Title,
   Button,
-  Icon
+  Icon,
+  View,
+  Text
 } from "native-base"
 
-import QuestCardDeck from "../../containers/QuestCardDeck"
-
-class QuestCard extends PureComponent {
+class QuestLogScreen extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
     header: (
       <Header>
         <Left>
           <Button transparent>
             <Icon
-              android="md-funnel"
-              ios="ios-funnel"
+              android="md-arrow-back"
+              ios="ios-arrow-back"
+              onPress={() => navigation.goBack()}
               style={{ fontSize: 20 }}
             />
           </Button>
         </Left>
         <Body>
-          <Title>Quest</Title>
+          <Title>Quest Log</Title>
         </Body>
         <Right>
-          <Button transparent onPress={() => navigation.navigate("QuestLog")}>
-            <Icon android="md-bookmarks" ios="ios-bookmarks" />
+          <Button transparent>
+            <Icon android="md-add" ios="ios-add" />
           </Button>
         </Right>
       </Header>
@@ -40,10 +41,12 @@ class QuestCard extends PureComponent {
   render() {
     return (
       <Container>
-        <QuestCardDeck />
+        <View>
+          <Text>This is the Quest Log</Text>
+        </View>
       </Container>
     )
   }
 }
 
-export default QuestCard
+export default QuestLogScreen

@@ -13,7 +13,7 @@ import {
 } from "native-base"
 
 class ProfileScreen extends PureComponent {
-  static navigationOptions = ({ navigation }) => ({
+  static navigationOptions = ({ navigation: { navigate } }) => ({
     header: (
       <Header>
         <Left>
@@ -25,7 +25,7 @@ class ProfileScreen extends PureComponent {
           <Title>Profile</Title>
         </Body>
         <Right>
-          <Button transparent>
+          <Button transparent onPress={() => navigate("Settings")}>
             <Icon android="md-settings" ios="ios-settings" />
           </Button>
         </Right>

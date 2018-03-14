@@ -33,7 +33,7 @@ class AppNavigator extends PureComponent {
   }
 
   render() {
-    return !this.props.auth.isEmpty ? (
+    return this.props.auth.isEmpty ? (
       <RootRouter
         navigation={addNavigationHelpers({
           dispatch: this.props.dispatch,
