@@ -59,6 +59,7 @@ export const SignedInNav = TabNavigator(
   }
 )
 
+// TODO: [BUG] Screens not showing up after loginning in and out
 export const RootNav = StackNavigator(
   {
     SignIn: { screen: SignInScreen },

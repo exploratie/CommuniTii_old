@@ -54,6 +54,7 @@ class SignInScreen extends React.PureComponent {
     input,
     label,
     type,
+    secureTextEntry,
     meta: { touched, error, warning }
   }) => {
     let hasError = false
@@ -63,14 +64,13 @@ class SignInScreen extends React.PureComponent {
     return (
       <Item style={{ margin: 10 }} error={hasError} floatingLabel>
         <Label>{label}</Label>
-        <Input {...input} />
+        <Input {...input} secureTextEntry={secureTextEntry} />
         {hasError ? <Text>{error}</Text> : <Text />}
       </Item>
     )
   }
 
   _handleLogin = ({ email, password }) => {
-    console.log(email, password)
     this.props.firebase.login({ email, password })
   }
 
@@ -81,6 +81,7 @@ class SignInScreen extends React.PureComponent {
           <Form>
             <Field label="Email" name="email" component={this._renderInput} />
             <Field
+              secureTextEntry={true}
               label="Password"
               name="password"
               component={this._renderInput}
